@@ -1,0 +1,63 @@
+/* AGI Watch — design tokens (dataviz reference palette, CVD-validated) */
+:root {
+  --page:        #f9f9f7;
+  --surface:     #fcfcfb;
+  --ink:         #0b0b0b;
+  --ink-2:       #52514e;
+  --muted:       #898781;
+  --grid:        #e1e0d9;
+  --baseline:    #c3c2b7;
+  --border:      rgba(11,11,11,0.10);
+  --predicted:   #2a78d6;   /* series 1: AI 2027 as written */
+  --actual:      #1baf7a;   /* series 2: observed reality   */
+  --good:        #0ca30c;
+  --good-text:   #006300;
+  --warning:     #fab219;
+  --serious:     #ec835a;
+  --critical:    #d03b3b;
+  --band:        rgba(42,120,214,0.12);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page:      #0d0d0d;
+    --surface:   #1a1a19;
+    --ink:       #ffffff;
+    --ink-2:     #c3c2b7;
+    --muted:     #898781;
+    --grid:      #2c2c2a;
+    --baseline:  #383835;
+    --border:    rgba(255,255,255,0.10);
+    --predicted: #3987e5;
+    --actual:    #199e70;
+    --good-text: #0ca30c;
+    --band:      rgba(57,135,229,0.16);
+  }
+}
+:root[data-theme="dark"] {
+  --page:      #0d0d0d;
+  --surface:   #1a1a19;
+  --ink:       #ffffff;
+  --ink-2:     #c3c2b7;
+  --muted:     #898781;
+  --grid:      #2c2c2a;
+  --baseline:  #383835;
+  --border:    rgba(255,255,255,0.10);
+  --predicted: #3987e5;
+  --actual:    #199e70;
+  --good-text: #0ca30c;
+  --band:      rgba(57,135,229,0.16);
+}
+:root[data-theme="light"] {
+  --page:      #f9f9f7;
+  --surface:   #fcfcfb;
+  --ink:       #0b0b0b;
+  --ink-2:     #52514e;
+  --muted:     #898781;
+  --grid:      #e1e0d9;
+  --baseline:  #c3c2b7;
+  --border:    rgba(11,11,11,0.10);
+  --predicted: #2a78d6;
+  --actual:    #1baf7a;
+  --good-text: #006300;
+  --band:      rgba(42,120,214,0.12);
+}

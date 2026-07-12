@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology — AGI Watch</title>
+  <meta name="description" content="Where every number on AGI Watch comes from: sources, pace multipliers, and which figures are estimates.">
+  <link rel="canonical" href="https://agi.ryanshaw.me/methodology.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/theme.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="./">AGI<span>Watch</span></a>
+    <div class="links">
+      <a href="./">Tracker</a>
+      <a href="methodology.html" aria-current="page">Methodology</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button">Dark mode</button>
+  </nav>
+
+  <article class="prose">
+    <h1>Methodology</h1>
+    <p>AGI Watch grades the <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> scenario against reality. Credibility is the whole product, so every number on the tracker falls into one of two buckets — and the UI tells you which.</p>
+
+    <h2>1. The authors' own figures (primary)</h2>
+    <p>The AI Futures Project publicly grades its own predictions. Wherever they publish a number, we use it verbatim:</p>
+    <ul>
+      <li><strong>Aggregate pace of progress</strong> — ~65% of predicted pace (Feb 2026 scorecard), revised to ~75% with July 2026 data.</li>
+      <li><strong>OpenAI revenue</strong> — ~$20B actual vs ~$18B predicted.</li>
+      <li><strong>METR 80% coding time horizon</strong> — 1.04× their central trajectory.</li>
+      <li><strong>Revised takeoff window</strong> — mid-2028 → mid-2030, from their AI Futures Model adjusted for compute and labor-growth slowdowns.</li>
+    </ul>
+    <p>Source: <a href="https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions" target="_blank" rel="noopener">Grading AI 2027's 2025 Predictions</a> (Eli Lifland &amp; Daniel Kokotajlo, Feb 12 2026; updated Jul 2026).</p>
+
+    <h2>2. Our estimates (always marked "~")</h2>
+    <p>Where the authors report predicted-vs-actual values but no multiplier, we derive one and flag it:</p>
+    <ul>
+      <li><strong>SWE-Bench Verified ~0.2×</strong> — predicted 85% by mid-2025 from a 72% baseline (13 points of gain); actual best was 74.5% (2.5 points). 2.5 ÷ 13 ≈ 0.19.</li>
+      <li><strong>Valuation ~0.5×</strong> — $500B was predicted for Jun 2025 and reached Oct 2025. A rough elapsed-time ratio; the authors describe it as "well behind pace."</li>
+    </ul>
+
+    <h2>What we deliberately don't show</h2>
+    <ul>
+      <li><strong>AI R&amp;D uplift</strong> — behind pace per the authors, but no defensible single multiplier exists.</li>
+      <li><strong>Largest training run</strong> — behind pace (no confirmed run substantially beyond GPT-4.5), but training compute is too opaque to quantify honestly.</li>
+    </ul>
+    <p>A number we can't defend is a number we don't chart.</p>
+
+    <h2>The re-projected timeline</h2>
+    <p>The bottom track on the tracker re-projects the scenario's milestones at the observed ~0.7× pace, anchored to the scenario's publication (April 2025), and uses the authors' own revised takeoff window rather than a naive linear stretch. Their personal medians differ (2029 for full coding automation per Kokotajlo; early 2030s per Lifland) — the scenario's "2027" was their <em>modal</em> year, not their median.</p>
+
+    <h2>Update cadence</h2>
+    <p>The tracker updates when the underlying data moves: on each AI Futures scorecard, on METR releases, and on major benchmark results. Every change is logged on the <a href="changelog.html">changelog</a> with the date and what moved. The raw data behind every chart is public at <code>data/tracker.json</code>.</p>
+
+    <h2>Corrections</h2>
+    <p>Spotted an error? <a href="about.html">Tell us</a> — corrections ship with a changelog entry, never silently.</p>
+  </article>
+
+  <footer>
+    <p>AGI Watch is an independent tracker and is not affiliated with the AI Futures Project.
+       Built by <a href="https://ai.ryanshaw.xyz" target="_blank" rel="noopener">Ryan Shaw</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>

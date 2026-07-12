@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — AGI Watch</title>
+  <meta name="description" content="What moved this week: every update to the AGI Watch tracker, dated and explained.">
+  <link rel="canonical" href="https://agi.ryanshaw.me/changelog.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/theme.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="./">AGI<span>Watch</span></a>
+    <div class="links">
+      <a href="./">Tracker</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="changelog.html" aria-current="page">Changelog</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button">Dark mode</button>
+  </nav>
+
+  <article class="prose">
+    <h1>Changelog</h1>
+    <p>Every change to the tracker's numbers, dated. If it isn't logged here, it didn't change.</p>
+    <div id="log">Loading…</div>
+  </article>
+
+  <footer>
+    <p>AGI Watch is an independent tracker and is not affiliated with the AI Futures Project.
+       Built by <a href="https://ai.ryanshaw.xyz" target="_blank" rel="noopener">Ryan Shaw</a>.</p>
+  </footer>
+
+</div>
+<script>
+(function () {
+  'use strict';
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  document.addEventListener('DOMContentLoaded', async function () {
+    const el = document.getElementById('log');
+    try {
+      const res = await fetch('data/tracker.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      el.innerHTML = data.changelog
+        .map((e) => '<div class="log-entry"><time>' + esc(e.date) + '</time><p>' + esc(e.entry) + '</p></div>')
+        .join('');
+    } catch (err) {
+      el.textContent = 'Could not load changelog (' + err.message + ').';
+    }
+  });
+})();
+</script>
+</body>
+</html>

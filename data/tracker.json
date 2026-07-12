@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "lastUpdated": "2026-07-12",
+    "asOf": "July 2026",
+    "paceLow": 0.65,
+    "paceHigh": 0.75,
+    "verdictHeadline": "Behind schedule — but on the predicted path",
+    "verdictSub": "Reality is running at roughly 65–75% of the pace the AI 2027 scenario predicted. The story is holding; the clock is slipping."
+  },
+  "tiles": [
+    {
+      "label": "Observed pace",
+      "value": "0.65–0.75×",
+      "note": "of the scenario's predicted speed, on quantitative metrics (authors' own grading)."
+    },
+    {
+      "label": "Takeoff window",
+      "value": "2027 → 2028–30",
+      "note": "Full-coding-automation → superintelligence, re-projected at the observed pace."
+    },
+    {
+      "label": "Qualitative calls",
+      "value": "Mostly right",
+      "note": "Agents arrived on cue; coding agents became real tools. It's the benchmark numbers that lag."
+    }
+  ],
+  "timeline": {
+    "startYear": 2025,
+    "endYear": 2031,
+    "todayPos": 25,
+    "todayLabel": "Today · Jul 2026",
+    "tracks": [
+      {
+        "id": "predicted",
+        "name": "As written (Apr 2025)",
+        "milestones": [
+          { "label": "Stumbling agents", "sub": "mid-2025", "pos": 8.3, "up": true, "tip": "Mid-2025: 'Stumbling agents' — personal-assistant agents debut, struggle for adoption." },
+          { "label": "Agent-1-scale run", "sub": "late 2025", "pos": 15, "tip": "Late 2025: 10^27-FLOP frontier model ('Agent-1'), biggest datacenters ever built." },
+          { "label": "Superhuman coder", "sub": "Mar 2027", "pos": 36.7, "up": true, "tip": "Mar 2027: superhuman coder — AI fully automates AI research engineering." },
+          { "label": "Superintelligence", "sub": "late 2027", "pos": 48.3, "tip": "Late 2027: takeoff completes — superintelligence in the scenario's race branch." }
+        ]
+      },
+      {
+        "id": "actual",
+        "name": "Observed pace (~0.7×)",
+        "band": { "left": 58.3, "width": 33.4, "label": "Revised takeoff window", "tip": "Authors' re-projection (AI Futures Model, adjusted for compute/labor slowdowns): takeoff runs mid-2028 to mid-2030." },
+        "milestones": [
+          { "label": "Agents arrived ✓", "sub": "2025", "pos": 10, "up": true, "tip": "Confirmed: ChatGPT Agent-style assistants shipped mid/late 2025 and struggled for adoption — almost exactly as written." },
+          { "label": "Frontier-scale run", "sub": "pending", "pos": 23, "pending": true, "tip": "Not yet: no confirmed training run substantially beyond GPT-4.5 as of Jul 2026." },
+          { "label": "Superhuman coder", "sub": "~2028", "pos": 58.3, "up": true, "pending": true, "tip": "Superhuman coder, re-projected: around mid-2028 at observed pace. Authors' own medians: 2029 (Kokotajlo) to early 2030s (Lifland)." },
+          { "label": "Superintelligence", "sub": "~2030", "pos": 91.7, "pending": true, "tip": "Superintelligence, re-projected: ~2030 at observed pace with the authors' slowdown adjustments." }
+        ]
+      }
+    ]
+  },
+  "paceMetrics": [
+    { "label": "OpenAI revenue", "sub": "~$20B actual vs $18B predicted", "mult": 1.10, "display": "1.10×", "status": "ahead", "estimated": false, "tip": "Annualized revenue hit ~$20B against a predicted $18B — slightly ahead of the scenario." },
+    { "label": "METR coding time horizon", "sub": "80% horizon vs central trajectory", "mult": 1.04, "display": "1.04×", "status": "onpace", "estimated": false, "tip": "Agents' 80%-reliability coding time horizon is moving at 1.04× the central AI-2027 trajectory — on pace." },
+    { "label": "All quantitative metrics", "sub": "authors' aggregate, Jul 2026", "mult": 0.75, "display": "0.75×", "status": "behind", "estimated": false, "tip": "Aggregate across all quantitative predictions: ~65% pace in Feb 2026, revised to ~75% with July 2026 data." },
+    { "label": "Company valuation", "sub": "$500B: predicted Jun '25, hit Oct '25", "mult": 0.5, "display": "~0.5×", "status": "behind", "estimated": true, "tip": "OpenAI reached the predicted $500B valuation ~4 months late — 'well behind pace' per the authors. Multiplier is an estimate." },
+    { "label": "SWE-Bench Verified", "sub": "74.5% actual vs 85% predicted", "mult": 0.2, "display": "~0.2×", "status": "behind", "estimated": true, "tip": "Predicted 85% by mid-2025 from a 72% baseline; best actual was 74.5% (Opus 4.1) — about a fifth of the predicted gain. Estimate." }
+  ],
+  "paceNote": "Revenue, METR, and the aggregate are the authors' own figures; valuation and SWE-Bench multipliers are estimated here from their reported predicted-vs-actual values. Not shown for lack of a defensible number: AI R&D uplift (behind) and largest-training-run compute (behind, high uncertainty).",
+  "scorecard": [
+    { "prediction": "Personal-assistant agents debut", "said": "Mid-2025; \"order me a burrito\"-style tasks; weak adoption", "reality": "ChatGPT Agent (Jul 2025) et al.; weak adoption", "verdict": "ok", "verdictLabel": "On pace" },
+    { "prediction": "Coding agents become real tools", "said": "Autonomous coders taking instructions via chat, saving hours or days", "reality": "Happened — the scenario's biggest qualitative call landed", "verdict": "ok", "verdictLabel": "On pace" },
+    { "prediction": "OpenAI annualized revenue", "said": "~$18B", "reality": "~$20B", "verdict": "ahead", "verdictLabel": "Ahead" },
+    { "prediction": "METR 80% coding time horizon", "said": "Central model trajectory", "reality": "1.04× the central trajectory", "verdict": "ok", "verdictLabel": "On pace" },
+    { "prediction": "OpenAI valuation $500B", "said": "Jun 2025", "reality": "Oct 2025", "verdict": "behind", "verdictLabel": "Behind" },
+    { "prediction": "AI software R&D uplift", "said": "Meaningful speedup of AI research by end of 2025", "reality": "End-2025 uplift ≈ what was predicted for the start of 2027's run-up", "verdict": "behind", "verdictLabel": "Behind" },
+    { "prediction": "Largest training run", "said": "10²⁷ FLOP (~50× GPT-4) in 2025", "reality": "No confirmed run substantially beyond GPT-4.5", "verdict": "behind", "verdictLabel": "Behind" },
+    { "prediction": "SWE-Bench Verified score", "said": "85% by mid-2025", "reality": "74.5% (Opus 4.1)", "verdict": "faroff", "verdictLabel": "Well behind" }
+  ],
+  "verdictCards": [
+    { "icon": "✗", "iconClass": "cross", "title": "Not on schedule", "body": "Reality runs at roughly two-thirds to three-quarters of the scenario's speed. Held constant, the 2027 takeoff slides to mid-2028 → mid-2030 — and the authors' own medians (2029 to early 2030s for full coding automation) already sit past the title year. 2027 was their modal year, never their median." },
+    { "icon": "✓", "iconClass": "tick", "title": "Directionally accurate", "body": "As a map of what happens in what order — agents first, then coding automation, then a compute-fueled race — it's tracking remarkably well, and the authors grade themselves publicly. Treat it as a well-built scenario with a sliding clock, not a countdown." },
+    { "icon": "!", "iconClass": "cross", "title": "One anomaly worth watching", "body": "Benchmarks are lagging the qualitative shifts, when they'd normally lead them. That suggests the recursive AI-R&D speedup the dramatic endings depend on is kicking in slower than modeled — the scenario's most contested assumption." }
+  ],
+  "sources": [
+    { "label": "AI 2027 (scenario)", "url": "https://ai-2027.com/" },
+    { "label": "Grading AI 2027's 2025 Predictions — AI Futures Project", "url": "https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions" },
+    { "label": "AI 2027 Tracker", "url": "https://ai2027-tracker.com/" },
+    { "label": "Timelines Forecast", "url": "https://ai-2027.com/research/timelines-forecast" }
+  ],
+  "changelog": [
+    { "date": "2026-07-12", "entry": "AGI Watch launches. Baseline: authors' Feb 2026 scorecard (~65% pace) plus their July 2026 preliminary update (~75%). Takeoff window re-projected to mid-2028 → mid-2030." }
+  ]
+}

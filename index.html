@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGI Watch — Is AGI on schedule?</title>
+  <meta name="description" content="A living scoreboard for the AI 2027 scenario: how fast is real AI progress versus the forecast? Updated as the data moves.">
+  <link rel="canonical" href="https://agi.ryanshaw.me/">
+  <meta property="og:title" content="AGI Watch — Is AGI on schedule?">
+  <meta property="og:description" content="Reality is running at ~65–75% of the pace AI 2027 predicted. Track every prediction against what actually happened.">
+  <meta property="og:url" content="https://agi.ryanshaw.me/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/theme.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="./">AGI<span>Watch</span></a>
+    <div class="links">
+      <a href="./" aria-current="page">Tracker</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" type="button">Dark mode</button>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">Tracking the AI 2027 scenario against reality</div>
+    <h1>Is AGI on schedule? Right now: <span class="pace" id="verdict-headline-pace">~0.7×</span> the predicted pace.</h1>
+    <p class="sub" id="verdict-sub">Reality is running at roughly 65–75% of the pace the AI 2027 scenario predicted. The story is holding; the clock is slipping.</p>
+    <span class="asof" id="asof">Loading…</span>
+  </header>
+
+  <p id="load-error" hidden style="color: var(--critical); font-weight: 600;"></p>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>Two timelines: as written vs. at observed pace</h2>
+    <p class="desc">Top track: milestones as the scenario wrote them. Bottom track: the same milestones re-projected at the pace reality is delivering, using the authors' revised takeoff window.</p>
+    <div class="legend">
+      <span class="key"><span class="swatch" style="background:var(--predicted)"></span> AI 2027 as written</span>
+      <span class="key"><span class="swatch" style="background:var(--actual)"></span> Observed / re-projected</span>
+      <span class="key"><span class="swatch hollow"></span> Not yet reached</span>
+    </div>
+    <div class="tl-scroll">
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Pace of progress by metric</h2>
+    <p class="desc">1.0× = exactly on the scenario's schedule. Bars left of the dashed line are running behind it.</p>
+    <div class="bars" id="bars"></div>
+    <p class="bars-note" id="bars-note"></p>
+  </section>
+
+  <section class="card">
+    <h2>Prediction scorecard</h2>
+    <p class="desc">Concrete calls from the scenario's 2025 chapters, graded against what actually happened.</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>Prediction</th><th>AI 2027 said</th><th>Reality</th><th>Verdict</th></tr>
+        </thead>
+        <tbody id="scorecard-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>The verdict</h2>
+    <div class="verdict" id="verdict-cards"></div>
+  </section>
+
+  <footer>
+    <p>Sources: <span id="sources"></span></p>
+    <p>Estimates are marked "~" and explained on the <a href="methodology.html">methodology page</a>.
+       AGI Watch is an independent tracker and is not affiliated with the AI Futures Project.
+       Built by <a href="https://ai.ryanshaw.xyz" target="_blank" rel="noopener">Ryan Shaw</a>.</p>
+  </footer>
+
+</div>
+
+<div id="tip" role="tooltip"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
