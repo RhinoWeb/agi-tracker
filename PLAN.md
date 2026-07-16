@@ -1,4 +1,4 @@
-# AGI Watch — agi.ryanshaw.me
+# AGI Watch — agi.ryanshaw.xyz
 
 **One-liner:** A public, auto-updating "are we on schedule for AGI?" tracker — the AI 2027 reality-check dashboard, grown into a living site under Ryan's brand.
 
@@ -34,7 +34,7 @@ RhinoWeb/agi-tracker
 ├── data/tracker.json     ALL content: milestones, pace metrics, scorecard rows, changelog
 ├── scripts/refresh.mjs   (v0.3) pulls Metaculus forecasts, opens a PR with diffs
 ├── .github/workflows/    weekly cron → refresh.mjs; Pages deploy
-└── CNAME                 agi.ryanshaw.me
+└── CNAME                 agi.ryanshaw.xyz
 ```
 
 Key principle: **content lives in JSON, not markup.** Weekly updates = edit one file (or merge the bot's PR); the page re-renders itself. Immutable render functions, no hand-editing HTML.
@@ -55,7 +55,7 @@ Key principle: **content lives in JSON, not markup.** Weekly updates = edit one 
 - Repo `RhinoWeb/agi-tracker`, Pages enabled, CNAME + HTTPS
 - Port the artifact into index.html + tokens.css + app.js, content moved to tracker.json
 - Methodology + about pages; OG/social card so shares look good
-- DoD: live at agi.ryanshaw.me, Lighthouse ≥ 95, renders both themes
+- DoD: live at agi.ryanshaw.xyz, Lighthouse ≥ 95, renders both themes
 
 **v0.2 — Make it ours (1 session)**
 - Hero verdict block: big "0.7×" pace dial + one-sentence verdict + "last updated" stamp

@@ -1,6 +1,6 @@
 # AGI Watch
 
-**Live at [agi.ryanshaw.me](https://agi.ryanshaw.me)** — a public scoreboard for the [AI 2027](https://ai-2027.com/) scenario: is AGI on schedule?
+**Live at [agi.ryanshaw.xyz](https://agi.ryanshaw.xyz)** — a public scoreboard for the [AI 2027](https://ai-2027.com/) scenario: is AGI on schedule?
 
 ## How it works
 
@@ -30,7 +30,7 @@ assets/theme.js       theme toggle (system preference + localStorage)
 Primary source: the AI Futures Project's own
 [prediction gradings](https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions).
 Derived estimates are flagged `"estimated": true` in the JSON and rendered with a "~" prefix.
-See [methodology](https://agi.ryanshaw.me/methodology.html).
+See [methodology](https://agi.ryanshaw.xyz/methodology.html).
 
 ## Roadmap
 
