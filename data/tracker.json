@@ -1,27 +1,44 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-12",
+    "lastUpdated": "2026-07-16",
     "asOf": "July 2026",
     "paceLow": 0.65,
     "paceHigh": 0.75,
     "verdictHeadline": "Behind schedule — but on the predicted path",
-    "verdictSub": "Reality is running at roughly 65–75% of the pace the AI 2027 scenario predicted. The story is holding; the clock is slipping."
+    "verdictSub": "Reality is moving at roughly 65–75% of the pace the AI 2027 scenario predicted. The direction is real; the deadline is slipping."
   },
   "tiles": [
     {
-      "label": "Observed pace",
+      "label": "Current answer",
       "value": "0.65–0.75×",
-      "note": "of the scenario's predicted speed, on quantitative metrics (authors' own grading)."
+      "note": "Behind the forecast on the numbers that matter, but not off the map."
     },
     {
-      "label": "Takeoff window",
-      "value": "2027 → 2028–30",
-      "note": "Full-coding-automation → superintelligence, re-projected at the observed pace."
+      "label": "Planning window",
+      "value": "2028–30",
+      "note": "A useful range for scenario planning, not a date anyone can promise."
     },
     {
-      "label": "Qualitative calls",
-      "value": "Mostly right",
-      "note": "Agents arrived on cue; coding agents became real tools. It's the benchmark numbers that lag."
+      "label": "Business move",
+      "value": "Use AI now",
+      "note": "Build with today’s agents, keep human judgment, and leave room for the curve to accelerate."
+    }
+  ],
+  "founderActions": [
+    {
+      "title": "Turn agents into leverage",
+      "body": "The forecast’s first qualitative calls landed: agents are useful, even when they are not autonomous employees. Look for work they can prepare, summarize, or draft.",
+      "next": "Pick one repeatable workflow and run it with an approval step this week."
+    },
+    {
+      "title": "Build the review layer",
+      "body": "The slower timeline is a reminder that quality, context, and accountability are still the scarce parts. Your advantage is not removing judgment; it is making judgment repeatable.",
+      "next": "Write the three checks a human must pass before work reaches a customer."
+    },
+    {
+      "title": "Plan in ranges",
+      "body": "Treat 2027 as a scenario, not a deadline. A 2028–30 window gives you time to invest in capability without betting the company on one dramatic date.",
+      "next": "Stress-test one hiring, tooling, or capital decision against a slower curve."
     }
   ],
   "timeline": {
@@ -83,6 +100,7 @@
     { "label": "Timelines Forecast", "url": "https://ai-2027.com/research/timelines-forecast" }
   ],
   "changelog": [
+    { "date": "2026-07-16", "entry": "Founder-first refresh: added a plain-English founder brief and three actionable next moves. The underlying scorecard and pace figures are unchanged." },
     { "date": "2026-07-12", "entry": "AGI Watch launches. Baseline: authors' Feb 2026 scorecard (~65% pace) plus their July 2026 preliminary update (~75%). Takeoff window re-projected to mid-2028 → mid-2030." }
   ]
 }

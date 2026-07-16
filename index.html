@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AGI Watch — Is AGI on schedule?</title>
-  <meta name="description" content="A living scoreboard for the AI 2027 scenario: how fast is real AI progress versus the forecast? Updated as the data moves.">
+  <title>AGI Watch — The founder's read on the AI 2027 forecast</title>
+  <meta name="description" content="A plain-English scoreboard for founders: is AI 2027 on schedule, what changed, and what should you do next?">
   <link rel="canonical" href="https://agi.ryanshaw.xyz/">
-  <meta property="og:title" content="AGI Watch — Is AGI on schedule?">
-  <meta property="og:description" content="Reality is running at ~65–75% of the pace AI 2027 predicted. Track every prediction against what actually happened.">
+  <meta property="og:title" content="AGI Watch — The founder's read on the AI 2027 forecast">
+  <meta property="og:description" content="Reality is running at ~65–75% of the pace AI 2027 predicted. See what changed and what to do next.">
   <meta property="og:url" content="https://agi.ryanshaw.xyz/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
@@ -27,23 +27,49 @@
       <a href="changelog.html">Changelog</a>
       <a href="about.html">About</a>
     </div>
+    <a class="nav-cta" href="https://ryanshaw.xyz" target="_blank" rel="noopener">Ryan's work ↗</a>
     <button class="theme-toggle" id="theme-toggle" type="button">Dark mode</button>
   </nav>
 
   <header class="hero">
-    <div class="eyebrow">Tracking the AI 2027 scenario against reality</div>
-    <h1>Is AGI on schedule? Right now: <span class="pace" id="verdict-headline-pace">~0.7×</span> the predicted pace.</h1>
-    <p class="sub" id="verdict-sub">Reality is running at roughly 65–75% of the pace the AI 2027 scenario predicted. The story is holding; the clock is slipping.</p>
-    <span class="asof" id="asof">Loading…</span>
+    <div class="hero-copy">
+      <div class="eyebrow">A founder-friendly reality check on AI 2027</div>
+      <h1>Is AGI on schedule? <span class="pace" id="verdict-headline-pace">~0.7×</span> is the useful answer.</h1>
+      <p class="sub" id="verdict-sub">Reality is moving at roughly 65–75% of the pace the AI 2027 scenario predicted. The direction is real; the deadline is slipping.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#founder-read">Show me what to do next ↓</a>
+        <a class="button button-quiet" href="#evidence">See the evidence</a>
+      </div>
+      <span class="asof" id="asof">Loading…</span>
+    </div>
+    <div class="hero-verdict" aria-label="Founder read">
+      <span class="verdict-label">Founder read</span>
+      <strong>Don’t wait for AGI.</strong>
+      <p>Build with today’s agents, keep a human at the important decisions, and plan for a slower but still compounding curve.</p>
+      <span class="verdict-mark">↗</span>
+    </div>
   </header>
 
   <p id="load-error" hidden style="color: var(--critical); font-weight: 600;"></p>
 
   <div class="tiles" id="tiles"></div>
 
-  <section class="card">
-    <h2>Two timelines: as written vs. at observed pace</h2>
-    <p class="desc">Top track: milestones as the scenario wrote them. Bottom track: the same milestones re-projected at the pace reality is delivering, using the authors' revised takeoff window.</p>
+  <section class="card founder-card" id="founder-read">
+    <div class="section-kicker">The operator's brief</div>
+    <div class="section-intro">
+      <div>
+        <h2>What this means if you run a business</h2>
+        <p class="desc">The forecast is a planning input, not a countdown clock. Use the current evidence to choose the next useful move.</p>
+      </div>
+      <span class="brief-note">Read this first</span>
+    </div>
+    <div class="action-grid" id="founder-actions"></div>
+  </section>
+
+  <section class="card" id="evidence">
+    <div class="section-kicker">The evidence</div>
+    <h2>Two timelines: the forecast vs. the pace we’re seeing</h2>
+    <p class="desc">The top line is what AI 2027 wrote. The bottom line is the same story re-projected using the authors’ own slowdown window.</p>
     <div class="legend">
       <span class="key"><span class="swatch" style="background:var(--predicted)"></span> AI 2027 as written</span>
       <span class="key"><span class="swatch" style="background:var(--actual)"></span> Observed / re-projected</span>
@@ -55,15 +81,17 @@
   </section>
 
   <section class="card">
-    <h2>Pace of progress by metric</h2>
-    <p class="desc">1.0× = exactly on the scenario's schedule. Bars left of the dashed line are running behind it.</p>
+    <div class="section-kicker">Where the signal is moving</div>
+    <h2>Some parts are early. The hard parts are late.</h2>
+    <p class="desc">1.0× means exactly on the scenario’s schedule. The point is not one magic number; it’s where the pattern is holding or breaking.</p>
     <div class="bars" id="bars"></div>
     <p class="bars-note" id="bars-note"></p>
   </section>
 
   <section class="card">
-    <h2>Prediction scorecard</h2>
-    <p class="desc">Concrete calls from the scenario's 2025 chapters, graded against what actually happened.</p>
+    <div class="section-kicker">The receipts</div>
+    <h2>What landed, what slipped</h2>
+    <p class="desc">Concrete calls from the scenario’s 2025 chapters, translated into the question a founder actually needs answered: how much should I trust this forecast?</p>
     <div class="tbl-scroll">
       <table>
         <thead>
@@ -74,8 +102,10 @@
     </div>
   </section>
 
-  <section class="card">
-    <h2>The verdict</h2>
+  <section class="card final-verdict">
+    <div class="section-kicker">Bottom line</div>
+    <h2>Plan for progress, not a date</h2>
+    <p class="desc">AGI Watch is not here to sell certainty. It is here to make the next business decision less abstract.</p>
     <div class="verdict" id="verdict-cards"></div>
   </section>
 
@@ -83,7 +113,7 @@
     <p>Sources: <span id="sources"></span></p>
     <p>Estimates are marked "~" and explained on the <a href="methodology.html">methodology page</a>.
        AGI Watch is an independent tracker and is not affiliated with the AI Futures Project.
-       Built by <a href="https://ai.ryanshaw.xyz" target="_blank" rel="noopener">Ryan Shaw</a>.</p>
+       Built by <a href="https://ryanshaw.xyz" target="_blank" rel="noopener">Ryan Shaw</a>.</p>
   </footer>
 
 </div>

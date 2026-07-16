@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
 /* AGI Watch — layout & components (consumes tokens.css) */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
@@ -183,4 +185,106 @@ footer a:hover { text-decoration: underline; }
   position: fixed; z-index: 10; pointer-events: none; display: none;
   background: var(--ink); color: var(--page); padding: 6px 10px; border-radius: 6px;
   font-size: 12px; max-width: 260px; line-height: 1.4;
+}
+
+/* ---------- founder-first refresh ---------- */
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 28rem),
+    var(--page);
+}
+.wrap { max-width: 1160px; padding: 26px 28px 72px; gap: 22px; }
+.nav { min-height: 42px; }
+.nav .brand { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 19px; letter-spacing: -0.045em; }
+.nav .brand span { color: var(--actual); }
+.nav .links { gap: 18px; font-size: 13px; }
+.nav-cta {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px;
+  color: var(--ink); background: var(--accent); border-radius: 999px;
+  text-decoration: none; font-size: 12px; font-weight: 700;
+}
+.theme-toggle { white-space: nowrap; }
+header.hero {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); gap: 28px;
+  padding: 48px 0 22px; align-items: end;
+}
+header.hero .eyebrow, .section-kicker {
+  color: var(--actual); font-family: "IBM Plex Mono", monospace; font-size: 11px;
+  font-weight: 500; letter-spacing: .11em; text-transform: uppercase;
+}
+header.hero .eyebrow { margin-bottom: 14px; }
+header.hero h1 {
+  max-width: 780px; font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: clamp(42px, 6.1vw, 76px); line-height: .98; letter-spacing: -.055em;
+}
+header.hero p.sub { max-width: 54ch; font-size: 18px; line-height: 1.5; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+.button { display: inline-flex; align-items: center; min-height: 42px; padding: 0 15px; border-radius: 7px; font-size: 13px; font-weight: 700; text-decoration: none; }
+.button-primary { background: var(--ink); color: var(--surface); }
+.button-primary:hover { background: var(--actual); }
+.button-quiet { border: 1px solid var(--border); color: var(--ink-2); background: var(--surface); }
+.button-quiet:hover { color: var(--ink); border-color: var(--actual); }
+.hero-verdict {
+  position: relative; min-height: 218px; padding: 24px; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+  background: var(--ink); color: var(--surface); border-radius: 18px 18px 4px 18px;
+  box-shadow: 10px 10px 0 var(--accent);
+}
+.hero-verdict::before { content: ""; position: absolute; width: 150px; height: 150px; right: -58px; top: -58px; border: 1px solid color-mix(in srgb, var(--accent) 75%, transparent); border-radius: 50%; }
+.verdict-label { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.hero-verdict strong { max-width: 9ch; margin-top: 20px; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 34px; line-height: .95; letter-spacing: -.05em; }
+.hero-verdict p { max-width: 29ch; margin: 14px 0 0; color: color-mix(in srgb, var(--surface) 72%, transparent); font-size: 14px; line-height: 1.45; }
+.verdict-mark { position: absolute; right: 22px; bottom: 18px; color: var(--accent); font-size: 26px; }
+.asof { margin-top: 18px; background: transparent; border: 0; padding: 0; color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 400; }
+.tiles { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tile { min-height: 132px; padding: 18px; border: 0; border-radius: 12px; box-shadow: 0 1px 0 var(--border); }
+.tile .label { font-family: "IBM Plex Mono", monospace; font-size: 10px; }
+.tile .value { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 31px; letter-spacing: -.045em; }
+.tile .note { max-width: 33ch; line-height: 1.4; }
+section.card { padding: 30px; border: 0; border-radius: 14px; box-shadow: 0 1px 0 var(--border); }
+section.card h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 25px; letter-spacing: -.035em; }
+section.card p.desc { font-size: 14px; line-height: 1.55; }
+.section-kicker { margin-bottom: 10px; }
+.section-intro { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.section-intro h2 { margin-bottom: 6px; }
+.section-intro .desc { margin-bottom: 22px; }
+.brief-note { padding: 6px 9px; color: var(--actual); background: color-mix(in srgb, var(--actual) 10%, transparent); border-radius: 5px; font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 500; text-transform: uppercase; white-space: nowrap; }
+.action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.action-card { min-height: 180px; padding: 18px; background: var(--surface-2); border-radius: 10px; }
+.action-card .action-number { color: var(--actual); font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+.action-card h3 { margin: 20px 0 8px; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 19px; line-height: 1; letter-spacing: -.03em; }
+.action-card p { margin: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; }
+.action-card strong { display: block; margin-top: 12px; color: var(--ink); font-size: 12px; }
+.legend { margin-top: 18px; }
+.tname { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .08em; }
+.mlab, .tl-grid .yr span, .today em { font-family: "IBM Plex Mono", monospace; }
+.barrow { grid-template-columns: 220px 1fr 64px; }
+.barrow .bl { font-size: 13px; }
+.btrack .fill { border-radius: 0 5px 5px 0; }
+table { font-size: 13px; }
+th { font-family: "IBM Plex Mono", monospace; font-size: 10px; }
+td { line-height: 1.45; }
+.final-verdict { background: var(--ink); color: var(--surface); }
+.final-verdict h2 { color: var(--surface); font-size: 31px; }
+.final-verdict p.desc { color: color-mix(in srgb, var(--surface) 72%, transparent); }
+.final-verdict .section-kicker { color: var(--accent); }
+.vcard { background: color-mix(in srgb, var(--surface) 8%, transparent); border-color: color-mix(in srgb, var(--surface) 18%, transparent); }
+.vcard h3 { color: var(--surface); }
+.vcard p { color: color-mix(in srgb, var(--surface) 72%, transparent); }
+.prose h1, .prose h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -.04em; }
+
+@media (max-width: 760px) {
+  header.hero { grid-template-columns: 1fr; padding-top: 34px; }
+  .hero-verdict { min-height: 190px; box-shadow: 7px 7px 0 var(--accent); }
+  .tiles, .action-grid { grid-template-columns: 1fr; }
+  .tile { min-height: 0; }
+  .nav .links { order: 3; width: 100%; margin: 4px 0 0; overflow-x: auto; padding-bottom: 2px; }
+  .nav { flex-wrap: wrap; }
+  .nav-cta { margin-left: auto; }
+  .section-intro { display: block; }
+  .brief-note { display: inline-block; margin-bottom: 18px; }
+  section.card { padding: 22px 18px; }
+  .barrow { grid-template-columns: 135px 1fr 50px; gap: 8px; }
+  .barrow .bl { font-size: 11px; }
 }

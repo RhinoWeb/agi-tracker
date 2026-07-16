@@ -19,6 +19,19 @@
       )
       .join('');
 
+  const renderFounderActions = (actions) =>
+    actions
+      .map(
+        (a, i) => `
+    <article class="action-card">
+      <div class="action-number">0${i + 1}</div>
+      <h3>${esc(a.title)}</h3>
+      <p>${esc(a.body)}</p>
+      <strong>Next move: ${esc(a.next)}</strong>
+    </article>`
+      )
+      .join('');
+
   const renderYearGrid = (startYear, endYear) => {
     const span = endYear - startYear;
     const cells = [];
@@ -161,6 +174,7 @@
     setText('verdict-sub', data.meta.verdictSub);
     setText('asof', 'Data as of ' + data.meta.asOf + ' · last updated ' + data.meta.lastUpdated);
     set('tiles', renderTiles(data.tiles));
+    set('founder-actions', renderFounderActions(data.founderActions));
     set('timeline', renderTimeline(data.timeline));
     set('bars', renderPaceBars(data.paceMetrics));
     setText('bars-note', data.paceNote);
